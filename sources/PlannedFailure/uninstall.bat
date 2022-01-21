@@ -1,0 +1,1 @@
+msiexec /x PlannedFailure.msi /l*vx uninstall.log

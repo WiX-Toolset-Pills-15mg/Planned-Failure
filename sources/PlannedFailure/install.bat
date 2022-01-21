@@ -1,0 +1,1 @@
+msiexec /i PlannedFailure.msi /l*vx install.log

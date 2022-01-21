@@ -1,0 +1,11 @@
+WiX Toolset Pills - Planned Failure
+==============================================================================
+
+This file is part of the "Planned Failure" Pill.
+The pill demonstrates how to use the WixFailWhenDeferred custom action provided by WiX Toolset in order to provoke a failure in the installation process.
+
+Details about the WixFailWhenDeferred custom action:
+https://wixtoolset.org/documentation/manual/v3/customactions/wixfailwhendeferred.html
+
+For more details about the pill please chech the GitHub repository:
+https://github.com/WiX-Toolset-Pills-15mg/Planned-Failure

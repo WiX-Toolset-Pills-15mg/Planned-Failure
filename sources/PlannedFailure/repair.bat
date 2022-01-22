@@ -1,0 +1,1 @@
+msiexec /fvecmus PlannedFailure.msi /l*vx repair.log

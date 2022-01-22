@@ -20,11 +20,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
+    <!--
+    ====================================================================================================
+    START: Overview
+    ====================================================================================================
+    
+    Sometimes, there is a need to provoke a failure in the installation process. For example, when we
+    want to test the rollback custom actions, it would be useful to raise an error at the very end of
+    the installation process.
+    
+    One way to solve this problem is to create a deferred custom action that returns a failure as a
+    response. Well, it would also be useful to have a public property that controls when the custom
+    action should fail and when it should succeed.
+    
+    The FireGiant team already created this custom action that we can use. See this article for details:
+    https://wixtoolset.org/documentation/manual/v3/customactions/wixfailwhendeferred.html
+    
+    The current project demonstrates how to use this mechanism. Proceed to the next step.
+    
+    NEXT: Product.wxs
+    -->
+
+    <!--
+    ====================================================================================================
+    Step 1: Add a reference to the WixUtilExtension library
+    ====================================================================================================
+    
+    Right click on the project -> Add -> Reference -> Browse ->
+    "c:\Program Files (x86)\WiX Toolset v3.11\bin\WixUtilExtension.dll"
+    
+    NEXT: Product.wxs
+    -->
+
     <Product
         Id="*"
         Name="Planned Failure"
         Language="1033"
-        Version="2.0.0.0"
+        Version="1.0.0.0"
         Manufacturer="Dust in the Wind"
         UpgradeCode="01078873-6969-423a-badb-850df2e4da5a">
 
@@ -33,7 +65,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             Compressed="yes"
             InstallScope="perMachine" />
 
-        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."/>
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
         <MediaTemplate />
 
         <Feature
@@ -43,6 +75,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
             <ComponentGroupRef Id="FileComponents" />
         </Feature>
+
+        <!--
+        ====================================================================================================
+        Step 2: Reference the WixFailWhenDeferred custom action
+        ====================================================================================================
+        
+        By referencing the custom action, it will be included also the WIXFAILWHENDEFERRED public property.
+        This property is controlling the custom action:
+            - if WIXFAILWHENDEFERRED = 1, then the WixFailWhenDeferred custom action will fail.
+            - if WIXFAILWHENDEFERRED = anything else, then the WixFailWhenDeferred custom action will
+              succeed.
+        
+        NEXT: install-with-error.bat
+        -->
 
         <CustomActionRef Id="WixFailWhenDeferred" />
 

@@ -24,6 +24,9 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="repair-with-error.bat" />
+    <Content Include="repair.bat" />
+    <Content Include="uninstall-with-error.bat" />
     <Content Include="uninstall.bat" />
     <Content Include="install-with-error.bat" />
     <Content Include="dummy.txt" />

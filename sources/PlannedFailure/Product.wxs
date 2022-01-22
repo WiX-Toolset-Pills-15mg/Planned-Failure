@@ -25,18 +25,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     START: Overview
     ====================================================================================================
     
-    Sometimes, there is a need to provoke a failure in the installation process. For example, when we
-    want to test the rollback custom actions, it would be useful to raise an error at the very end of
-    the installation process.
+    Sometimes, there is a need to provoke a controlled failure in the installation process. For example,
+    when we want to test the rollback custom actions, it would be useful to raise an error at the very
+    end of the installation process.
     
     One way to solve this problem is to create a deferred custom action that returns a failure as a
     response. Well, it would also be useful to have a public property that controls when the custom
     action should fail and when it should succeed.
     
-    The FireGiant team already created this custom action that we can use. See this article for details:
-    https://wixtoolset.org/documentation/manual/v3/customactions/wixfailwhendeferred.html
+    The FireGiant team already created this custom action for us to use. It is called WixFailWhenDeferred:
+        - https://wixtoolset.org/documentation/manual/v3/customactions/wixfailwhendeferred.html
     
-    The current project demonstrates how to use this mechanism. Proceed to the next step.
+    The current project demonstrates how to use this mechanism. Proceed to the first step.
     
     NEXT: Product.wxs
     -->

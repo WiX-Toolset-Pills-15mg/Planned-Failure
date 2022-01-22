@@ -14,7 +14,7 @@ A step-by-step tutorial can be found in the [doc/article/README.md](doc/article/
 
 The Visual Studio solution the solves the described problem can be found in the [sources](sources) directory.
 
-### c) Code comments
+### c) Code notes
 
 Inside the Visual Studio solution search (Ctrl+Shift+F) for the `START` comment, then follow the `Step` comments.
 

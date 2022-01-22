@@ -6,7 +6,7 @@ Sometimes, there is a need to provoke a controlled failure in the installation p
 
 One way to solve this problem is to create a deferred custom action that returns a failure as a response. Well, it would also be useful to have a public property that controls when the custom action should fail and when it should succeed.
 
-The FireGiant team already created this custom action that we can use. It is called `WixFailWhenDeferred`:
+The FireGiant team already created this custom action for us to use. It is called `WixFailWhenDeferred`:
 
 - https://wixtoolset.org/documentation/manual/v3/customactions/wixfailwhendeferred.html
 

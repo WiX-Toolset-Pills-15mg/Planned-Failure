@@ -5,8 +5,8 @@
 :: Set the WIXFAILWHENDEFERRED argument to value 1 in order to instruct the WixFailWhenDeferred custom
 :: action to fail and provoke a rollback of the whole uninstallation process.
 :: 
-:: Note: this command seams to not work. On my machine, this command, even if it should fail, it
-::       successfully uninstalled the product.
+:: Note: This command doesn't seem to be working properly. On my machine, this command, even if it 
+::       should have failed, it successfully uninstalled the product.
 :: 
 :: END
 

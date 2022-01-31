@@ -1,5 +1,5 @@
 :: ====================================================================================================
-:: Step 3a: Use the WIXFAILWHENDEFERRED argument
+:: Step 3a: Use the "WIXFAILWHENDEFERRED" argument
 :: ====================================================================================================
 :: 
 :: Set the WIXFAILWHENDEFERRED argument to value 1 in order to instruct the WixFailWhenDeferred custom
